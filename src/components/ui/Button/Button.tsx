@@ -26,6 +26,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
                         props.className
                     )}
                     href={props.onClickLink || ''}
+                    target={'_blank'}
                 >
                     {props.children}
                 </a>
@@ -40,6 +41,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
                         props.className
                     )}
                     to={props.onClickLink || ''}
+                    target={'_blank'}
                 >
                     {props.children}
                 </Link>

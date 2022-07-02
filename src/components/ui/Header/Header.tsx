@@ -7,11 +7,12 @@ import './Header.scss';
 import NavigationDrawer from './NavigationDrawer/NavigationDrawer';
 import SearchBox from './SearchBox/SearchBox';
 // import Logo from '-!svg-react-loader!../../../../assets/logo.svg'
-import Logo from '-!svg-react-loader!../../../../content/svg/logo.svg'
+// import Logo from '-!svg-react-loader!../../../../content/svg/logo_black.svg'
+import HFLogo from '-!svg-react-loader!../../../../content/svg/huggingface_logo.svg'
 //..GatsbyImageSharpFluid_noBase64 for no blur up effect
 const fetchLogoQuery = graphql`
     query {
-        file(relativePath: { eq: "logos/logo.svg" }) {
+        file(relativePath: { eq: "logos/logo_black.png" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid_noBase64
@@ -49,20 +50,20 @@ const Header: React.FC = () => {
                 </div>
                 <div className="header__item">
                     <Link to="/">
-                        {/* <Img
+                        <Img
                             fluid={image.file.childImageSharp.fluid}
                             alt="AI Summer"
                             className="logo"
-                            // style={{width: "4vw"}}
+                            style={{width: "50px"}}
                         
-                        ></Img> */}
-                        <img src={Logo}></img>
-                        <Logo/>
+                        ></Img>
+                        {/* <img src={Logo}></img> */}
+                        {/* <Logo/> */}
                     </Link>
                 </div>
                 <nav className="header__item nav">
                     <div className="nav__item">
-                        <Link to="/about/">About</Link>
+                        <Link to="https://vietai.org/" target={'_blank'}>About</Link>
                     </div>
                     <div className="nav__item dropdown">
                         <div className="nav__item__link">
@@ -102,11 +103,12 @@ const Header: React.FC = () => {
                     <div className="nav__item">
                         <Link to="/markdown-page/">Markdown Page</Link>
                     </div>
-                   
+
                 </nav>
 
+                {/* Github */}
                 <div className="header__item header__item__secondary">
-                    <a href="">
+                    <a href="https://github.com/vietai" target={'_blank'}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -119,8 +121,42 @@ const Header: React.FC = () => {
                         </svg>
                     </a>
                 </div>
+
+                {/* HuggingFace */}
                 <div className="header__item header__item__secondary">
-                    <a href="">
+                    <a href="https://huggingface.co/VietAI" target={'_blank'}>
+                        <HFLogo/>
+                    </a>
+                </div>
+
+
+
+
+                {/* Facebook */}
+                <div className="header__item header__item__secondary">
+                    <a href="https://www.facebook.com/vietaipublic" target={'_blank'}>
+                        <svg
+                            viewBox="0 0 128 128"
+                            width="20"
+                            height="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                // eslint-disable-next-line max-len
+                                d="M128,112c0,8.8-7.2,16-16,16H16c-8.8,0-16-7.2-16-16V16C0,7.2,7.2,0,16,0h96c8.8,0,16,7.2,16,16V112z"
+                                fill="#4267B2"
+                            />
+                            <path
+                                // eslint-disable-next-line max-len
+                                d="M68.877,128V78.188h-17.78V60.425h17.784V44.029c0-16.537,9.764-26.279,24.514-26.279  c7.068,0,12.834,0.756,14.605,0.991v18.573l-11.874-0.005c-8.022,0-9.523,3.979-9.523,9.572v13.544h20.556l-2.904,17.763H86.603V128  H68.877z"
+                                fill="#ffffff"
+                            />
+                        </svg>
+                    </a>
+                </div>
+
+                <div className="header__item header__item__secondary">
+                    <a href="https://twitter.com/vietaiorg" target={'_blank'}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -128,13 +164,12 @@ const Header: React.FC = () => {
                             fill="#55ACEE"
                             viewBox="0 0 24 24"
                         >
-                            {/* eslint-disable-next-line max-len */}
                             <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                         </svg>
                     </a>
                 </div>
                 <div className="header__item header__item__secondary">
-                    <a href="">
+                    <a href="https://www.linkedin.com/company/vietai" target={'_blank'}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -148,27 +183,6 @@ const Header: React.FC = () => {
                     </a>
                 </div>
 
-                <div className="header__item header__item__secondary">
-                    <a href="">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 225 215"
-                            width="25"
-                            height="25"
-                        >
-                            <path
-                                // eslint-disable-next-line max-len
-                                d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"
-                            />
-                            <path
-                                fill="#7289DA"
-                                // eslint-disable-next-line max-len
-                                d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"
-                            />
-                        </svg>
-                    </a>
-                </div>
-
                 <div className="header__item search-nav">
                     <SearchBox size={Size.small} />
                 </div>
@@ -176,10 +190,10 @@ const Header: React.FC = () => {
                     <Button
                         accent={Accent.primary}
                         type={ButtonType.linkInternal}
-                        onClickLink=""
+                        onClickLink="https://vietai.org/contact/"
                         className="newsletter-nav__button"
                     >
-                        Newsletter
+                        Contact
                     </Button>
                 </div>
             </header>
