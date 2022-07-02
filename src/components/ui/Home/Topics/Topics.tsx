@@ -32,7 +32,6 @@ const renderGroup = (
                     className="topic-card-light__logo"
                 ></span>
                 <h4 className="topic-card-light__title">{topic.title}</h4>
-                <p className="topic-card-light__desc">{topic.desc}</p>
             </Card>
         );
     }

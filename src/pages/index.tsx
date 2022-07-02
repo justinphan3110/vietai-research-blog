@@ -59,19 +59,12 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
                     <div className="section-text">
                         <h2>Topics</h2>
                         <p>
-                            Get lorem dolor sed viverra. Id faucibus nisl
-                            tincidunt eget nullam non nisi est sit. Aliquam
-                            vestibulum morbi blandit cursus risus at ultrices.
-                        </p>
-                        <p>
-                            Vel turpis nunc eget lorem. Scelerisque fermentum
-                            dui faucibus in ornare quam viverra orci.
+                            Our Researchers and Students are working on a wide-range of topics in AI
                         </p>
                     </div>
                     <Topics topics={data.topicsYaml.topics} />
                 </Container>
             </PageSection>
-
             <Divider direction={Direction.horizontal} />
             <PageSection className="more-articles-section">
                 <Container>

@@ -45,7 +45,7 @@ const PostBanner: React.FC<PostBannerProps> = ({
                     <div className="post-banner__content__details__topics">
                         {post.tags.map((p) => (
                             <Link
-                                to={`/topics/${topicsDetails[p].url}`}
+                                // to={`/topics/${topicsDetails[p].url}`}
                                 className="post-banner__content__details__topics__tag"
                                 key={p}
                             >
