@@ -6,11 +6,12 @@ import Button from '../Button/Button';
 import './Header.scss';
 import NavigationDrawer from './NavigationDrawer/NavigationDrawer';
 import SearchBox from './SearchBox/SearchBox';
-// import Logo from '../../../../content'
+// import Logo from '-!svg-react-loader!../../../../assets/logo.svg'
+import Logo from '-!svg-react-loader!../../../../content/svg/logo.svg'
 //..GatsbyImageSharpFluid_noBase64 for no blur up effect
 const fetchLogoQuery = graphql`
     query {
-        file(relativePath: { eq: "logos/logo.png" }) {
+        file(relativePath: { eq: "logos/logo.svg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid_noBase64
@@ -48,13 +49,15 @@ const Header: React.FC = () => {
                 </div>
                 <div className="header__item">
                     <Link to="/">
-                        <Img
+                        {/* <Img
                             fluid={image.file.childImageSharp.fluid}
                             alt="AI Summer"
                             className="logo"
                             // style={{width: "4vw"}}
                         
-                        ></Img>
+                        ></Img> */}
+                        <img src={Logo}></img>
+                        <Logo/>
                     </Link>
                 </div>
                 <nav className="header__item nav">

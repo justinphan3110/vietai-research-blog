@@ -40,95 +40,12 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
             <Seo isPost={false} />
             <AnnouncementHeader />
             <HomeBanner horizontalCarouselTopics={data.topicsYaml.topics} />
-            {/* <PageSection className="what-is-section">
-                <Container>
-                    <div className="section-text">
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <p>
-                            Consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Rutrum
-                            quisque non tellus orci ac. Arcu risus quis varius
-                            quam quisque id diam vel quam. Porta non pulvinar
-                            neque laoreet suspendisse interdum consectetur
-                            libero id. Urna molestie at elementum eu facilisis
-                            sed odio morbi quis. Orci nulla pellentesque
-                            dignissim enim sit amet.
-                        </p>
-                        <p>
-                            Dui id ornare arcu odio ut sem. Semper viverra nam
-                            libero justo laoreet sit amet cursus. Nec feugiat in
-                            fermentum posuere urna nec tincidunt. Adipiscing
-                            elit ut aliquam purus sit amet luctus venenatis
-                        </p>
-                        <p>
-                            Consectetur adipiscing elit ut aliquam purus sit.
-                            Tempor commodo ullamcorper a lacus vestibulum.
-                            Mauris nunc congue nisi vitae suscipit
-                        </p>
-                    </div>
-
-                    <Group size={2}>
-                        {data.homeYaml.about_section
-                            .slice(0, 2)
-                            .map((block, index) => {
-                                return (
-                                    <Block
-                                        key={index}
-                                        direction={Direction.vertical}
-                                        aos="zoom-in"
-                                    >
-                                        <span
-                                            dangerouslySetInnerHTML={{
-                                                __html: block.icon
-                                            }}
-                                        ></span>
-                                        <h3>{block.title}</h3>
-                                        <div
-                                            dangerouslySetInnerHTML={{
-                                                __html: block.desc
-                                            }}
-                                        ></div>
-                                    </Block>
-                                );
-                            })}
-                    </Group>
-                    <Group size={2}>
-                        {data.homeYaml.about_section
-                            .slice(2, 4)
-                            .map((block, index) => {
-                                return (
-                                    <Block
-                                        key={index}
-                                        direction={Direction.vertical}
-                                        aos="zoom-in"
-                                    >
-                                        <span
-                                            dangerouslySetInnerHTML={{
-                                                __html: block.icon
-                                            }}
-                                        ></span>
-                                        <h3>{block.title}</h3>
-                                        <div
-                                            dangerouslySetInnerHTML={{
-                                                __html: block.desc
-                                            }}
-                                        ></div>
-                                    </Block>
-                                );
-                            })}
-                    </Group>
-                </Container>
-            </PageSection> */}
             <PageSection className="posts-per-topic-section">
                 <Container>
                     <div className="section-text">
-                        <h2>Explore our content</h2>
+                        <h2>Explore VietAI Research Works</h2>
                         <p>
-                            Eget mauris pharetra et ultrices neque ornare aenean
-                            euismod. Nunc mi ipsum faucibus vitae aliquet nec
-                            ullamcorper sit. Eu lobortis elementum nibh tellus
-                            molestie nunc non blandit massa. Massa tempor nec
-                            feugiat nisl pretium
+                            An Artificial Intelligence where you can read about our new state-of-the-art Deep Learning works.
                         </p>
                     </div>
 

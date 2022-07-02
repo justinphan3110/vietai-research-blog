@@ -17,7 +17,7 @@ const getNextActiveSlides = (
     return activeSlides;
 };
 
-const carouselLength = 3;
+const carouselLength = 5;
 
 const getAnimationClassName = (index: number): string => {
     if (index == 0) {
