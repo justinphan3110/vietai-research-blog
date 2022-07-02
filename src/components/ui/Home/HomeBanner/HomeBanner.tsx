@@ -15,21 +15,11 @@ const HomeBanner: React.FC<HomeBannerProps> = (props: HomeBannerProps) => {
         <div className="home-banner">
             <div className="home-banner__content">
                 <div className="home-banner__content__details">
-                    <h1> Scientific blog template based on AI Summer</h1>
+                    <h1>VietAI Research Works</h1>
 
                     <p>
-                        A full example of this template can be found on{' '}
-                        <a href="https://theaisummer.com">theaisummer.com</a>
+                        We connect students and members of VietAI with our mentors, which are world-class experts in AI, to do cutting-edge research.
                     </p>
-
-                    <Button
-                        accent={Accent.primary}
-                        type={ButtonType.linkExternal}
-                        onClickLink="https://theaisummer.com"
-                        className="home-banner__content__details__cta"
-                    >
-                        See AI Summer
-                    </Button>
                 </div>
                 <div className="home-banner__content__image">
                     <HorizontalCarousel

@@ -15,7 +15,7 @@ const AnnouncementHeader: React.FC<AnnouncementHeaderProps> = (
     return (
         <div className={props.className || 'announcement-header'}>
             <div className="announcement-header__content">
-                <p>Tincidunt dui ut ornare lectus sit amet est placerat in.</p>
+                <p>Check out our newest ViT5 Summarization Works</p>
                 <Button
                     accent={Accent.primary}
                     type={ButtonType.linkExternal}

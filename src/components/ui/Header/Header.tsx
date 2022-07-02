@@ -6,13 +6,13 @@ import Button from '../Button/Button';
 import './Header.scss';
 import NavigationDrawer from './NavigationDrawer/NavigationDrawer';
 import SearchBox from './SearchBox/SearchBox';
-
+// import Logo from '../../../../content'
 //..GatsbyImageSharpFluid_noBase64 for no blur up effect
 const fetchLogoQuery = graphql`
     query {
-        file(relativePath: { eq: "logos/logo_placeholder.png" }) {
+        file(relativePath: { eq: "logos/logo.png" }) {
             childImageSharp {
-                fluid(maxWidth: 200) {
+                fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid_noBase64
                 }
             }
@@ -52,6 +52,8 @@ const Header: React.FC = () => {
                             fluid={image.file.childImageSharp.fluid}
                             alt="AI Summer"
                             className="logo"
+                            // style={{width: "4vw"}}
+                        
                         ></Img>
                     </Link>
                 </div>

@@ -48,6 +48,7 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-remark-images`,
+        'gatsby-plugin-react-svg',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -55,6 +56,15 @@ module.exports = {
                 path: `${__dirname}/content/assets/images`
             }
         },
+        {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+              rule: {
+                include: /assets/
+              }
+            }
+          }
+          ,
         {
             resolve: `gatsby-plugin-mdx`,
             options: {

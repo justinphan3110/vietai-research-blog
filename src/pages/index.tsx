@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
             <Seo isPost={false} />
             <AnnouncementHeader />
             <HomeBanner horizontalCarouselTopics={data.topicsYaml.topics} />
-            <PageSection className="what-is-section">
+            {/* <PageSection className="what-is-section">
                 <Container>
                     <div className="section-text">
                         <h2>Lorem ipsum dolor sit amet</h2>
@@ -118,7 +118,7 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
                             })}
                     </Group>
                 </Container>
-            </PageSection>
+            </PageSection> */}
             <PageSection className="posts-per-topic-section">
                 <Container>
                     <div className="section-text">
