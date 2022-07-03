@@ -117,6 +117,9 @@ export const homeQuery = graphql`
                     layout
                     suburl
                     tags
+                    github
+                    huggingface
+                    venue
                     title
                 }
             }

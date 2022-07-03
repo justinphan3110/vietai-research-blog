@@ -53,6 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
                             author
                             tags
                             publishedAt
+                            github
                         }
                     }
                 }

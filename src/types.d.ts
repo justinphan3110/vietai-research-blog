@@ -29,9 +29,9 @@ interface Frontmatter {
     tags: Array<string>;
     author: Array<string>;
     suburl: string;
-    huggingface: string;
-    github: string;
-    venue: string;
+    huggingface?: string;
+    github?: string;
+    venue?: string;
     publishedAt?: string;
     modifiedAt?: string;
 }
