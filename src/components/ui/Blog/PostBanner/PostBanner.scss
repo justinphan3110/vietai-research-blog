@@ -48,6 +48,15 @@
 
                     color: $dark-gray;
                 }
+                &__tag_green {
+                    background-color: #228B22;
+                    border-radius: 4px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                    padding: 4px 10px 4px 10px;
+
+                    color: #ffffff;
+                }
             }
 
             &__source {

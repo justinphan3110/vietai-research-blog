@@ -14,6 +14,9 @@ huggingface: https://huggingface.co/VietAI/vit5-large-vietnews-summarization
 paper_link: https://arxiv.org/abs/2205.06457
 ---
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/vit5-pretrained-text-to-text-transformer-for/abstractive-text-summarization-on-vietnews)](https://paperswithcode.com/sota/abstractive-text-summarization-on-vietnews?p=vit5-pretrained-text-to-text-transformer-for)
+
+
 ## Introduction
 We present **ViT5**, a pretrained Transformerbased encoder-decoder model for the Vietnamese language. With T5-style selfsupervised pretraining, ViT5 is trained on
 a large corpus of high-quality and diverse Vietnamese texts. We benchmark ViT5 on two downstream text generation tasks, **Abstractive Text Summarization** and **Named Entity Recognition (NER)**.
@@ -101,6 +104,11 @@ for output in outputs:
     print(line)
 ```
 
+## Acknowledgement
+
+We would like to thank the Google TPU Research Cloud (TRC) program and VietAI for providing us with free access to TPU v3-8 to train and finetune large ViT5 models. 
+
+
 ## Refer to this work
 
 ```
@@ -113,4 +121,24 @@ for output in outputs:
 }
 
 ```
+
+## References
+
+[1] Faisal Ladhak, Esin Durmus, Claire Cardie, and Kathleen R. McKeown. 2020. Wikilingua: A new benchmark dataset for cross-lingual abstractive summarization. CoRR, abs/2010.03093
+
+[2] Dat Quoc Nguyen and Anh Tuan Nguyen. 2020. PhoBERT: Pre-trained language models for Vietnamese. In Findings of the Association for Computational Linguistics: EMNLP 2020, pages 1037–1042.
+
+[3] Hieu Nguyen, Long Phan, James Anibal, Alec Peltekian, and Hieu Tran. 2021. VieSum: How Robust Are Transformer-based Models on Vietnamese Summarization?
+
+[4] Van-Hau Nguyen, Thanh-Chinh Nguyen, Minh-Tien Nguyen, and Nguyen Hoai. 2019. Vnds: A vietnamese dataset for summarization. pages 375–380
+
+[5] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. 2019. Exploring the limits of transfer learning with a unified text-to-text transformer. CoRR, abs/1910.10683.
+
+[6] Nguyen Luong Tran, Duong Minh Le, and Dat Quoc Nguyen. 2021. BARTpho: Pre-trained Sequence-to-Sequence Models for Vietnamese
+
+[7] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. CoRR, abs/1706.03762.
+
+[8] Guillaume Wenzek, Marie-Anne Lachaux, Alexis Conneau, Vishrav Chaudhary, Francisco Guzm ́an, Armand Joulin, and Edouard Grave. 2020. CCNet: Extracting high quality monolingual datasets from web crawl data. In Proceedings of the 12th Language Resources and Evaluation Conference, page 4003–4012, Marseille, France. European Language Resources Association.
+
+[9] Linting Xue, Noah Constant, Adam Roberts, Mihir Kale, Rami Al-Rfou, Aditya Siddhant, Aditya Barua, and Colin Raffel. 2020. mt5: A massively multilingual pre-trained text-to-text transformer. CoRR, abs/2010.11934.
 

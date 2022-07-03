@@ -45,7 +45,7 @@ const PostBanner: React.FC<PostBannerProps> = ({
                     </div>
                     <div className="post-banner__content__details__topics">
                         {/* Github */}
-                        {post.github &&<div>
+                        {post.github && <div>
                             <a href={post.github} target={'_blank'}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -61,15 +61,18 @@ const PostBanner: React.FC<PostBannerProps> = ({
                         {/* HuggingFace */}
                         {post.huggingface && <div className="header__item header__item__secondary">
                             <a href={post.huggingface} target={'_blank'}>
-                                <HFLogo/>
+                                <HFLogo />
                             </a>
                         </div>}
                         {/* Notebook */}
                         {post.notebook && <div className="header__item header__item__topics">
                             <a href={post.notebook} target={'_blank'}>
-                                <ColabLogo/>
+                                <ColabLogo />
                             </a>
                         </div>}
+                    </div>
+                    <div className="post-banner__content__details__topics">
+                        <a href={post.paper_link} target={'_blank'} className="post-banner__content__details__topics__tag_green">📃 {post.venue}</a>
                     </div>
                     <div className="post-banner__content__details__topics">
                         {post.tags.map((p) => (
