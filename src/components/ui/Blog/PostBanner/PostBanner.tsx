@@ -21,18 +21,19 @@ const PostBanner: React.FC<PostBannerProps> = ({
                     <h1>{post.title}</h1>
 
                     <div className="post-banner__content__details__post-details">
-                        {post.author.map((a, i) => (
-                            <Fragment key={a}>
-                                <Link
-                                    to={`/author/${a.split(' ').join('-')}/`}
-                                    className="post-banner__content__details__post-details__author"
-                                >
-                                    {a}
-                                </Link>
-                                {post.author[i + 1] && <span>{','}</span>}
-                            </Fragment>
-                        ))}
-
+                        <div>
+                            {post.author.map((a, i) => (
+                                <Fragment key={a}>
+                                    <Link
+                                        to={`/author/${a.split(' ').join('-')}/`}
+                                        className="post-banner__content__details__post-details__author"
+                                    >
+                                        {a}
+                                    </Link>
+                                    {post.author[i + 1] && <span>{','}</span>}
+                                </Fragment>
+                            ))}
+                        </div>
                         <span>{'on'}</span>
                         <span>{post.publishedAt}</span>
                         <span>{'·'}</span>
