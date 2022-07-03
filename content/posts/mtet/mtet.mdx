@@ -134,6 +134,9 @@ Many great artists such as Michelangelo, da Vinci and Sir Edwin Henry Landseer w
 </Tab>
 </Tabs>
 
+<br />
+<i><center>Table 1. Some examples in different domains from the training set.</center></i>
+<br />
 
 In this release, we cleaned and deduplicated our first version of the dataset (datav1), while adding in 1.2M training text pairs from various text sources. 
 This grows our dataset from 3.0M to near 4.2M training text pairs in datav2.
@@ -159,7 +162,15 @@ In addition to improving dataset size and diversity, we employed vanilla Transfo
 
 With the help of Google’s Cloud TPUv3 and Google Cloud Platform infrastructure, we are able to train large models for faster and longer, in the end achieving state-of-the-art translation quality on our Transformer models v2.
 
-<!--- Table 2 -->
+Model|#Params|#Layers|#Heads|Hidden size|Intermediate size
+:--|:--|:--|:--|:--|:--
+Transformer-tall9 (ours)|180M|9|12|768|3072
+Transformer-tall18 (MTet)|380M|18|12|768|3072
+mBART|610M|12|16|1024|4096
+M2M100|1.2B|24|16|1024|8192
+<br />
+<i><center>Table 2. Hyperparameter settings</center></i>
+<br />
 
 In Figure 1, we report the results of MTet models on the IWSLT2015 Translation corpus. MTet Transformer-tall18 models achieve state-of-the-art translation for both Vietnamese and English. 
 There is also a significant improvement from training on a larger MTet dataset, contributing to 0.7% and 1.6% for En-Vi and Vi-En respectively.
@@ -249,6 +260,10 @@ Vi2En
 </Tab>
 </Tabs>
 
+<br />
+<i><center>Table 3. Some good translation outputs from different models across different domains</center></i>
+<br />
+
 Besides that, our model however couldn't perform well in some examples below.
 
 <Tabs size={3}>
@@ -324,6 +339,10 @@ Vi2En
 ```
 </Tab>
 </Tabs>
+
+<br />
+<i><center>Table 4. Some bad translation outputs from different models across different domains</center></i>
+<br />
 
 Our detailed data statistics can be found [here](https://github.com/vietai/mTet/blob/main/data_distribution.txt).
 
