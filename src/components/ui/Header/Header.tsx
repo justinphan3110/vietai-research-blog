@@ -33,21 +33,6 @@ const Header: React.FC = () => {
     return (
         <Fragment>
             <header className="header">
-                <div
-                    className="header__hamburger-icon"
-                    onClick={() => toggleNavDrawer()}
-                >
-                    <svg width="20" height="15">
-                        <rect fill="#f4a444" width="20" height="3"></rect>
-                        <rect fill="#f4a444" y="6" width="20" height="3"></rect>
-                        <rect
-                            fill="#f4a444"
-                            y="12"
-                            width="20"
-                            height="3"
-                        ></rect>
-                    </svg>
-                </div>
                 <div className="header__item">
                     <Link to="/">
                         <Img
