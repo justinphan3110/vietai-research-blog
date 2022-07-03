@@ -65,45 +65,6 @@ const Header: React.FC = () => {
                     <div className="nav__item">
                         <Link to="https://vietai.org/" target={'_blank'}>About</Link>
                     </div>
-                    <div className="nav__item dropdown">
-                        <div className="nav__item__link">
-                            <Link to="">Topics</Link>
-                            <div className="nav__item__link__icon dropdown">
-                                <svg
-                                    width="10"
-                                    height="17"
-                                    viewBox="0 0 10 13"
-                                    fill="#2f4858ffgatbsy pl"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        // eslint-disable-next-line max-len
-                                        d="M0.978147 6.375H9.01877C9.57502 6.375 9.85315 7.08887 9.4594 7.50723L5.44065 11.7805C5.1969 12.0395 4.80002 12.0395 4.55627 11.7805L0.537522 7.50723C0.143772 7.08887 0.421897 6.375 0.978147 6.375Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div className="dropdown__wrapper">
-                            <div className="dropdown-content">
-                                <div className="dropdown-content__item">
-                                    <Link to="/topics/topic-1/">Topic 1</Link>
-                                </div>
-                                <div className="dropdown-content__item">
-                                    <Link to="/topics/topic-2/">Topic 2</Link>
-                                </div>
-                                <div className="dropdown-content__item">
-                                    <Link to="/topics/topic-3/">Topic 3</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="nav__item">
-                        <Link to="/markdown-page/">Markdown Page</Link>
-                    </div>
-
                 </nav>
 
                 {/* Github */}
