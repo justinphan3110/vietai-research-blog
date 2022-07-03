@@ -1,11 +1,11 @@
 module.exports = {
     siteMetadata: {
         siteUrl: `localhost:8000`, //YOUR SITE URL
-        siteName: 'BLOG NAME',
-        title: 'BLOG TITLE',
-        description: 'BLOG DESCRIPTION',
+        siteName: 'VietAI Research Blog',
+        title: 'VietAI Research Blog',
+        description: 'VietAI Research Blog',
         titleTemplate: '%s | BLOG NAME',
-        author: 'BLOG AUTHOR'
+        author: 'VietAI'
     },
     plugins: [
         {
