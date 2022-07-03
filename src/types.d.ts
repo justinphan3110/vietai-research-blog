@@ -32,8 +32,10 @@ interface Frontmatter {
     huggingface?: string;
     github?: string;
     venue?: string;
+    paper_link?: string;
     publishedAt?: string;
     modifiedAt?: string;
+    notebook?: string;
 }
 
 interface Post {

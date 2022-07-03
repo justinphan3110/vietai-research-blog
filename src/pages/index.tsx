@@ -118,9 +118,11 @@ export const homeQuery = graphql`
                     suburl
                     tags
                     github
+                    notebook
                     huggingface
                     venue
                     title
+                    paper_link
                 }
             }
         }

@@ -33,13 +33,15 @@ const PostCard: React.FC<PostCardProps> = ({
             className={cn(className, 'post-card')} //to pass group className and apply group scss
             aos="fade-up"
         >
-            {post.image.childImageSharp && <Img
+            {post.image.childImageSharp && <span className="post-card__image_wrapper" onClick={() => openBlogPage(post.suburl)}>
+                <Img
 
-                fluid={post.image.childImageSharp.fluid}
-                alt={post.title}
-                className="post-card__image"
+                    fluid={post.image.childImageSharp.fluid}
+                    alt={post.title}
+                    className="post-card__image"
 
-            ></Img>}
+                ></Img>
+            </span>}
             <div className="post-card__tags">
                 <span className="post-card__tags__item">
                     {post.tags.join(' · ')}
@@ -54,7 +56,7 @@ const PostCard: React.FC<PostCardProps> = ({
                         className="post-card-footer__block"
                     >
                         <div className="post-card-footer__block__item">
-                            <a href='' target={'_blank'}> {post.venue} </a>
+                            <a href={post.paper_link || post.suburl} target={'_blank'}> {post.venue} </a>
                         </div>
                     </Block>
                     <Block

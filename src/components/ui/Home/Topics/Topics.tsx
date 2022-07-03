@@ -21,7 +21,7 @@ const renderGroup = (
             <Card
                 key={topic.title}
                 direction={Direction.vertical}
-                onClickLink={`topics/${topic.url}`}
+                // onClickLink={`topics/${topic.url}`}
                 className="topic-card-light"
                 aos="zoom-in"
             >

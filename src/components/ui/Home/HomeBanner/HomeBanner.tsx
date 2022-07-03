@@ -32,7 +32,7 @@ const HomeBanner: React.FC<HomeBannerProps> = (props: HomeBannerProps) => {
                                 <Link
                                     key={topic.title}
                                     className="carousel-topic"
-                                    to={`/topics/${topic.url}`}
+                                    // to={`/topics/${topic.url}`}
                                 >
                                     <div className="carousel-topic__logo-wrapper">
                                         <span

@@ -113,6 +113,11 @@ export const blogQuery = graphql`
                         }
                     }
                 }
+                github
+                huggingface
+                notebook
+                paper_link
+                venue
                 tags
                 author
                 suburl

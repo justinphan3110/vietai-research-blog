@@ -4,114 +4,113 @@ title: 'ViT5: Pretrained Text-to-Text Transformer for Vietnamese Language Genera
 description: We present ViT5, a pretrained Transformer-based encoder-decoder model for the Vietnamese language that achieves state-of-the-art results on Vietnamese Text Summarization
 image: vit5.png
 tags: [summarization, text-generation, text-classification]
-author: [Author 1]
+author: [Long Phan,Hieu Tran,Hieu Nguyen,Trieu H. Trinh]
 publishedAt: '2022-02-16'
 modifiedAt: '2022-02-16'
 suburl: vit5/
 github: https://github.com/vietai/ViT5
 venue: NAACL SRW 2022 
 huggingface: https://huggingface.co/VietAI/vit5-large-vietnews-summarization
+paper_link: https://arxiv.org/abs/2205.06457
 ---
 
-Articles are written in [MDX](https://mdxjs.com/). MDX allows to combine standard markdown with JSX, so that you can import react components and use them in your markdown.
+## Introduction
+We present **ViT5**, a pretrained Transformerbased encoder-decoder model for the Vietnamese language. With T5-style selfsupervised pretraining, ViT5 is trained on
+a large corpus of high-quality and diverse Vietnamese texts. We benchmark ViT5 on two downstream text generation tasks, **Abstractive Text Summarization** and **Named Entity Recognition (NER)**.
+In this work, we validate the performance of ViT5 against many other pretrained Transformer-based encoder-decoder models. 
+Our experiments show that ViT5 significantly outperforms existing models and achieves state-of-the-art results on Vietnamese Text Summarization. On the task of Named Entity Recognition, ViT5 is competitive against previous best results from pretrained encoder-based Transformer models.
 
-All typical markdown syntax is supported, including:    
+## ViT5
+In this section, we will explain our newly released ViT5 models, the vocabulary generation steps, the pretraining data, and the training setup. 
 
-## Blockquotes
+### Pretraining Data
 
-> This is a blockquote.
+We use the CC100 Dataset (Monolingual Datasets from Web Crawl Data) [^1]
+The total size for the Vietnamese Corpus is 138GB of raw text. We process and filter out 69GB of short paragraphs for 256-length model and 71GB of long paragraphs for 1024-length model.
 
-## Images with caption
+[^1]: https://huggingface.co/datasets/cc100
 
-![example-image](example-image.jpg)
-*Source:[AI Summer](theaisummer.com)*
+### Vocabulary
+Different from some other current Vietnamese Transformer-based language models, we find that an effective vocabulary can contribute a significant improvement to our model performance. 
+Therefore, we did pre-process on a 5GB subset of our pretraining corpus with care like normalizing punctuation and capitalization, splitting numbers. 
+We fixed the size of vocabulary to 36K sub-words and trained SentencePiece[^2] model on that dataset.
+
+[^2]: https://github.com/google/sentencepiece
+
+### Model
+ViT5 follows the encoder-decoder architecture and the T5 framework[^3]. 
+The original works of T5 proposed five different configs of model size: small, base, large, 3B, and 11B. For the purpose of practical study, we adapt the base (310M parameters) and large (866M parameters) models for ViT5 models and leave bigger models for future works. 
+
+We train ViT5 models with two different input and output lengths: <ins>256-length</ins> and <ins>1024-length</ins>. We thoroughly experimented with these two models to have an insight into the importance of pretraining data length for summarization tasks. For the self-supervised training learning objectives, we use the span-corruption objective with a corruption rate of 15%.
+
+Figure 1 shows the computed loss during the self-supervised training stage for the three models. Larger model with larger context optimizes much better, which leads to better downstream performance.
+
+[^3]: https://github.com/google-research/text-to-text-transfer-transformer
+
+![loss](loss.png)
+*Figure 1: Loss curves for the masked span prediction task were used to pretrain the ViT5 models.*
+
+## Results
+### Abstractive Summarization
+We report the results of the ViT5 models on two datasets: Wikilingua[^4] and Vietnews (VNDS)[^5] against other pre-trained transformer models in Table 1.
+
+![results](results.png)
+*Table 1: Test result on Wikilingua and Vietnews Abstractive Summarization. The best scores are in bold and second best scores are underlined. The scores in gray color are our experiments. Code and models for reproducing our experiments: https://github.com/vietai/ViT5*
+
+Our experiments show that both ViT5<sub>base</sub> and ViT5<sub>large</sub> achieves state-of-the-art results on summarization in both Wikilingua and Vietnews corpus. 
+With around 270M parameters for both encoder-decoder, ViT5<sub>base</sub> outperforms other existing pre-trained Vietnamese model like BARTpho which is much larger.
+ViT5 checkpoints for both pre-training, finetuning, and inference are available at [VietAI's HuggingFace](https://huggingface.co/VietAI).
+
+[^4]: https://github.com/esdurmus/Wikilingua
+
+[^5]: https://github.com/ThanhChinhBK/vietnews
+
+### Named Entity Recognition (NER)
+
+To verify the effectiveness of ViT5 on classification tasks, we test our models on PhoNER_COVID19 dataset [^6]. 
+PhoNER is a dataset for recognizing named entities related to the COVID19 domain in Vietnamese. The dataset consists of 35,000 entities in over 10,000 sentences.
+
+![ner](ner.png)
+*Table 2: Test results on PhoNER_COVID19*
+
+The ViT5<sub>large 1024-length</sub> model, although effective in generating Vietnamese abstractive summarization, shows its limitation in classification tasks with lower F1 scores on NER task. 
+On the other hand, our ViT5<sub>base 1024-length</sub> model still performs slightly better than PhoBERT<sub>base</sub> and competitively the same as the current state-of-the-art PhoBERT<sub>large</sub> on the PhoNER corpus.
 
 
-## Code Blocks
 
-Inline code is represented as `import python`
+[^6]: https://github.com/VinAIResearch/PhoNER_COVID19
 
-Display code blocks example:
-
+## 🤗 Hugging Face 
 ```python
-import python
-
-def main():
-    print("Hello World")
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+​
+tokenizer = AutoTokenizer.from_pretrained("VietAI/vit5-large-vietnews-summarization")  
+model = AutoModelForSeq2SeqLM.from_pretrained("VietAI/vit5-large-vietnews-summarization")
+​
+sentence = "VietAI là tổ chức phi lợi nhuận với sứ mệnh ươm mầm tài năng về trí tuệ nhân tạo và xây dựng một cộng đồng các chuyên gia trong lĩnh vực trí tuệ nhân tạo đẳng cấp quốc tế tại Việt Nam."
+text =  "vietnews: " + sentence + " </s>"
+encoding = tokenizer.encode_plus(text, pad_to_max_length=True, return_tensors="pt")
+input_ids, attention_masks = encoding["input_ids"].to("cuda"), encoding["attention_mask"].to("cuda")
+outputs = model.generate(
+    input_ids=input_ids, attention_mask=attention_masks,
+    max_length=256,
+    early_stopping=True
+)
+for output in outputs:
+    line = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+    print(line)
 ```
 
-Code blocks are highlighted with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
-
-## Latex
-
-Inline latex is rendered using one dollar sign $x=u-z$ while display latex required two dollars signs following the below format:
-
-$$
-x=u-z
-$$
-
-## Bibliography
-
-Citations can be added as markdown footnotes [^1]
-
-[^1]: This is a citation.
-
-## Emded videos ans gifs
-
-Embed videos can be imported as iframe. For better responsiveness, iframes can be wrapped in a `<div className="video-container"></div> `
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Custom components
-
-MDX enable us to build custom components and insert them directly in the markdown. All imported components must be declared in the `BlogPage` component. Examples of built components so far include:
-
-### Tweet
-
-<TwitterTweetEmbed tweetId={'1492138217386217473'} />
-
-### Tabs
-
-<Tabs size={3}>
-<Tab label="Python">
-
-```python
-
-def main():
-    print("Hello World")
+## Refer to this work
 
 ```
-
-</Tab>
-
-<Tab label="Go">
-
-```go
-
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, world.")
+@misc{vit5,
+  doi = {10.48550/ARXIV.2205.06457},
+  author = {Phan, Long and Tran, Hieu and Nguyen, Hieu and Trinh, Trieu H.},
+  title = {ViT5: Pretrained Text-to-Text Transformer for Vietnamese Language Generation},
+  publisher = {arXiv},
+  year = {2022},
 }
 
-
 ```
 
-</Tab>
-
-<Tab label="C">
-
-```c
-
-/* main.c */
-int main(int argc, char *argv[]) {
-
-}
-
-```
-
-</Tab>
-
-</Tabs>

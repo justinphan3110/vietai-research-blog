@@ -24,6 +24,7 @@ tabs_posts:
       posts:
           - vit5/
           - mtet/
+          - mtet/
           
     # - topic: Computer Vision
     #   posts:
