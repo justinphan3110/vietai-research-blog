@@ -1,7 +1,7 @@
 {
-  "name": "aisummer-blog-template",
+  "name": "vietai-research-blog-template",
   "private": true,
-  "description": "Blog template based on theaisummer.com",
+  "description": "VietAI Research Blog",
   "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",

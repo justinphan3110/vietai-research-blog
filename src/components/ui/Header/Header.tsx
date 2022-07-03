@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                     <Link to="/">
                         <Img
                             fluid={image.file.childImageSharp.fluid}
-                            alt="AI Summer"
+                            alt="VietAI Research"
                             className="logo"
                             style={{width: "50px"}}
                         

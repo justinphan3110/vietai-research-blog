@@ -47,7 +47,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = (
                     <Link to="/">
                         <Img
                             fluid={image.file.childImageSharp.fluid}
-                            alt="AI Summer"
+                            alt="VietAI Research"
                             className="logo"
                         ></Img>
                     </Link>

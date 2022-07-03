@@ -38,7 +38,7 @@ const Search: React.FC<SearchProps> = ({ data }: SearchProps) => {
                 isPost={false}
                 title="Search"
                 url="search/"
-                description="Search AI Summer"
+                description="Search VietAI Research"
             />
             
             <PageSection>
