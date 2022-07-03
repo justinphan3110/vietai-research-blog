@@ -270,7 +270,7 @@ module.exports = {
                     }
                   `,
                         output: '/feed.xml',
-                        title: 'BLOG TITLE'
+                        title: 'VietAI Research'
                     }
                 ]
             }

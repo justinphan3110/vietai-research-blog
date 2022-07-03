@@ -61,7 +61,7 @@ const Seo: React.FC<SeoProps> = (props: SeoProps) => {
 
     const seo = {
         title: props.title
-            ? `${props.title} | BLOG TITLE`
+            ? `${props.title} | VietAI Research`
             : defaultSeo.defaultTitle,
         description: props.description || defaultSeo.defaultDescription,
         image: `${defaultSeo.url}${
