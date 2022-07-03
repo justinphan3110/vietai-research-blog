@@ -1,11 +1,11 @@
 module.exports = {
     siteMetadata: {
         siteUrl: `localhost:8000`, //YOUR SITE URL
-        siteName: 'BLOG NAME',
-        title: 'BLOG TITLE',
-        description: 'BLOG DESCRIPTION',
-        titleTemplate: '%s | BLOG NAME',
-        author: 'BLOG AUTHOR'
+        siteName: 'VietAI Research',
+        title: 'VietAI Research',
+        description: 'VietAI Research',
+        titleTemplate: '%s | VietAI Research',
+        author: 'VietAI Research Team'
     },
     plugins: [
         {
@@ -43,7 +43,6 @@ module.exports = {
                 offset: -100
             }
         },
-
         //images
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,

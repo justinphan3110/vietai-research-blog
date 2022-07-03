@@ -160,10 +160,10 @@ const Seo: React.FC<SeoProps> = (props: SeoProps) => {
             <meta name="twitter:site" content="BLOG TWITTER ACCOUNT" />
             <meta name="twitter:creator" content="BLOG CREATOR TWITTER"></meta>
 
-            <meta name="copyright" content="BLOG NAME" />
+            <meta name="copyright" content="VietAI Research" />
             <meta name="robots" content="follow" />
-            <meta name="application-name" content="BLOG NAME" />
-            <meta name="apple-mobile-web-app-title" content="BLOG NAME"></meta>
+            <meta name="application-name" content="VietAI Research" />
+            <meta name="apple-mobile-web-app-title" content="VietAI Research"></meta>
 
             <link rel="canonical" href={seo.url} />
             <link
@@ -382,7 +382,7 @@ const querySeo = graphql`
         favicon96: file(relativePath: { eq: "icons/favicon-96x96.png" }) {
             publicURL
         }
-        favicon: file(relativePath: { eq: "icons/favicon.ico" }) {
+        favicon: file(relativePath: { eq: "icons/favicon.png" }) {
             publicURL
         }
         ms70: file(relativePath: { eq: "icons/ms-icon-70x70.png" }) {
