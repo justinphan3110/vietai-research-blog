@@ -78,7 +78,7 @@ const SimilarPosts: React.FC<SimilarPostsProps> = (
                             <div
                                 className={`similar-posts__dropdown-content${activeDropdowns[i]}`}
                             >
-                                {similarPosts[topic].similarPosts.map(
+                                {similarPosts[topic]?.similarPosts.map(
                                     (item, j) => (
                                         <div
                                             key={j}
@@ -92,7 +92,7 @@ const SimilarPosts: React.FC<SimilarPostsProps> = (
                                         </div>
                                     )
                                 )}
-                                {similarPosts[topic].isTrimmed ? (
+                                {similarPosts[topic]?.isTrimmed ? (
                                     <div className="similar-posts__item--see-more">
                                         <Link
                                             to={`/topics/${props.allTopicsDetails[topic].url}`}

@@ -72,8 +72,7 @@ export const TopicQuery = graphql`
         ) {
             nodes {
                 frontmatter {
-                    author
-                    
+                    author 
                     description
                     image {
                         childImageSharp {
@@ -86,6 +85,7 @@ export const TopicQuery = graphql`
                     suburl
                     tags
                     title
+                    github
                 }
             }
         }

@@ -133,6 +133,9 @@ module.exports = {
                                             extension
                                             publicURL
                                         }
+                                        github
+                                        huggingface
+                                        venue
                                         suburl
                                         tags
                                         title
@@ -148,7 +151,9 @@ module.exports = {
                     'tags',
                     'image',
                     'suburl',
-                    'author'
+                    'author',
+                    'github',
+
                 ], //what fields the query returns
                 normalizer: ({ data }) =>
                     data.allMdx.nodes.map((node) => ({
@@ -157,7 +162,8 @@ module.exports = {
                         tags: node.frontmatter.tags,
                         image: node.frontmatter.image,
                         suburl: node.frontmatter.suburl,
-                        author: node.frontmatter.author
+                        author: node.frontmatter.author,
+                        github: node.frontmatter.github,
                     }))
             }
         },
@@ -247,6 +253,7 @@ module.exports = {
                             frontmatter {
                                 author
                                 description
+                                github
                                 suburl
                                 title
                                 publishedAt
