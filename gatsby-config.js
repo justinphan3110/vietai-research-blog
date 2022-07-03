@@ -130,6 +130,8 @@ module.exports = {
                                                     sizes
                                                 }
                                             }
+                                            extension
+                                            publicURL
                                         }
                                         suburl
                                         tags

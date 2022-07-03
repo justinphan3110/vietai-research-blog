@@ -84,6 +84,8 @@ exports.createPages = async ({ graphql, actions }) => {
                                 sizes
                             }
                         }
+                        extension
+                        publicURL
                     }
                 }
             }

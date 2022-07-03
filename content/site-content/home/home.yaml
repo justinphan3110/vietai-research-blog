@@ -22,11 +22,10 @@ about_section:
 tabs_posts:
     - topic: Natural Language Processing
       posts:
-          - example-post-4/
-          - example-post-2/
-          - example-post-3/
+          - mtet/
+          - mtet/
     - topic: Computer Vision
       posts:
           - example-post-2/
-          - example-post-4/
           - example-post-5/
+

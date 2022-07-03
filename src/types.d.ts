@@ -18,6 +18,8 @@ interface FluidImage {
             sizes: string;
         };
     };
+    extension: String;
+    publicURL: String;
 }
 
 interface Frontmatter {

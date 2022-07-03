@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from '../components/layout/Container/Container';
 import Group from '../components/layout/Group/Group';
 import PageLayout from '../components/layout/PageLayout/PageLayout';
@@ -35,6 +35,9 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
     const postsSelector = new PostsSelector(data.allMdx.nodes);
     useAnimationOnScroll();
+    useEffect(() => {
+        console.log(data.homeYaml.tabs_posts)
+    }, [])
     return (
         <PageLayout>
             <Seo isPost={false} />
@@ -52,6 +55,7 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
                     <PostsPerTopic
                         {...postsSelector.getByTopic(data.homeYaml.tabs_posts)}
                     />
+                    {true || console.log(data.homeYaml.tabs_posts)}
                 </Container>
             </PageSection>
             <PageSection className="topics-section">

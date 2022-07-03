@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Img from 'gatsby-image';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Direction } from '../../../../globals';
 import Card from '../Card';
 import './PostCard.scss';
@@ -14,6 +14,9 @@ const PostCard: React.FC<PostCardProps> = ({
     post,
     className
 }: PostCardProps) => {
+    useEffect(() => {
+        console.log(post)
+    }, [])
     return (
         <Card
             direction={Direction.vertical}
@@ -21,11 +24,11 @@ const PostCard: React.FC<PostCardProps> = ({
             className={cn(className, 'post-card')} //to pass group className and apply group scss
             aos="fade-up"
         >
-            <Img
+            {post.image.childImageSharp && <Img
                 className="post-card__image"
                 fluid={post.image.childImageSharp.fluid}
                 alt={post.title}
-            ></Img>
+            ></Img>}
             <div className="post-card__tags">
                 <span className="post-card__tags__item">
                     {post.tags.join(' · ')}
