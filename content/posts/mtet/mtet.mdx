@@ -185,7 +185,7 @@ En2Vi
     
     M2M100: Sự xói mòn của đầm lầy trên bề mặt pháo đài hoàng gia Hue đã gây ra rất nhiều thiệt hại và hiện nay là một vấn đề cấp bách cần giải quyết.
     
-    Ours (MTet): Sự xói mòn của rêu trên bề mặt của thành lũy Hoàng gia Huế đã gây ra rất nhiều thiệt hại và hiện là một vấn đề cấp bách cần được giải quyết .
+    Ours (MTet): Sự xói mòn của rêu trên bề mặt của thành lũy Hoàng gia Huế đã gây ra rất nhiều thiệt hại và hiện là một vấn đề cấp bách cần được giải quyết.
 ```
 ```text
 Vi2En
@@ -195,7 +195,7 @@ Vi2En
     
     M2M100: PAS Scale is simple and easy to apply. PAS Scale is effective and well applied clinically in early diagnosis of inflammation.
     
-    Ours (MTet): PAS score is simple and easy to apply . PAS score is effective and applied clinically in the early diagnosis of appendicitis .
+    Ours (MTet): PAS score is simple and easy to apply. PAS score is effective and applied clinically in the early diagnosis of appendicitis.
 ```
 </Tab>
 
@@ -219,7 +219,7 @@ Vi2En
     
     M2M100: Authors of architectural works are persons who directly create the whole or part of architectural works.
     
-    Ours (MTet): The authors of architectural works are those who directly create the whole or part of architectural works .
+    Ours (MTet): The authors of architectural works are those who directly create the whole or part of architectural works.
 ```
 </Tab>
 
@@ -233,7 +233,7 @@ En2Vi
     
     M2M100: Tôi đã bỏ qua để đề cập đến nó trong thư của tôi, nhưng tôi đã từng là một con cá voi.
     
-    Ours (MTet): Tôi đã quên đề cập đến nó trong lá thư của tôi , nhưng tôi đã từng là một thợ săn cá voi
+    Ours (MTet): Tôi đã quên đề cập đến nó trong lá thư của tôi, nhưng tôi đã từng là một thợ săn cá voi
 
 ```
 ```text
@@ -244,14 +244,86 @@ Vi2En
     
     M2M100: I made so much money for my master that he paid me free when I died.
     
-    Ours (MTet): I made so much money for my master , he set me free when he died . cá voi
+    Ours (MTet): I made so much money for my master, he set me free when he died.
 ```
 </Tab>
 </Tabs>
 
 Besides that, our model however couldn't perform well in some examples below.
 
-<!--- TABLE 4 -->
+<Tabs size={3}>
+<Tab label="Medical">
+
+```text
+En2Vi
+    Input: Serum paraquat concentration was determined the effective values in estimating the severity and dead prognosis.
+    
+    Groundtruth: Xét nghiệm định lượng paraquat huyết tương có giá trị tốt trong chẩn đoán mức độ nặng và tiên lượng tử vong.
+    
+    M2M100: Nồng độ paraquat huyết thanh đã được xác định các giá trị hiệu quả trong việc ước tính mức độ nghiêm trọng và dự báo tử vong.
+    
+    Ours (MTet): Nồng độ fructose huyết thanh đã được xác định giá trị hiệu quả trong đánh giá mức độ nặng và tiên lượng tử vong.
+```
+```text
+Vi2En
+    Input: Dị vật đường ăn là một cấp cứu trong lĩnh vực Tai Mũi Họng, kiến thức của quần chúng nhân dân về dị vật đường ăn còn một số hạn chế.
+    
+    Groundtruth: Foreign body ingestion is an emergency in otology, knowledge of people about foreign bodies ingestion is not enough.
+    
+    M2M100: Sugar minerals are an emergency in the field of Nose throat, the knowledge of the people's masses of food minerals is some limited.
+    
+    Ours (MTet): Meal-sugar herniation is an emergency in ENT, knowledge of people about food-sugar herniation is limited.
+```
+</Tab>
+
+<Tab label="Law">
+
+```text
+En2Vi
+    Input: Disputes arise not from commercial activities specified in Clause 3, Article 2 of this Ordinance.
+    
+    Groundtruth: Tranh chấp phát sinh không thuộc hoạt động thương mại được quy định tại khoản 3 Điều 2 của Pháp lệnh này.
+    
+    M2M100: Tranh chấp không phát sinh từ các hoạt động thương mại quy định tại khoản 3 Điều 2 của Quy định này.
+    
+    Ours (MTet): Tranh chấp không phát sinh từ hoạt động thương mại quy định tại khoản 3 Điều 2 của Pháp lệnh này.
+```
+```text
+Vi2En
+    Input: Không được sử dụng nguồn vốn sự nghiệp không có tính chất xây dựng cơ bản để đầu tư xây dựng mới, hoặc mở rộng.
+    
+    Groundtruth: It is forbidden to use the service capital without a capital construction character to invest in new constructions or in expansion.
+    
+    M2M100: Do not use funds of non-fundamental construction nature for new construction, or expansion investments.
+    
+    Ours (MTet): Non-business capital sources other than capital construction capital must not be used for investment in new construction, expansion.
+```
+</Tab>
+
+<Tab label="Movie">
+
+```text
+En2Vi
+    Input: You're the man in the middle, who else would I strong arm?
+    
+    Groundtruth: Anh là người trung gian, không gây áp lực với anh thì với ai?
+    
+    M2M100: Bạn là người đàn ông ở giữa, ai khác tôi mạnh tay?
+    
+    Ours (MTet): Ông là người đàn ông ở giữa, còn ai khác có thể giúp tôi bắn?
+```
+```text
+Vi2En
+    Input: Dân chúng tôi cũng sẽ được hưởng lợi như người của cô từ vụ mùa bội thu
+    
+    Groundtruth: Our people, as much as yours, will benefit from a good harvest.
+    
+    M2M100: Our people will benefit as well as yours from the harvest.
+    
+    Ours (MTet): We will also benefit like your men from the harvest.
+```
+</Tab>
+</Tabs>
 
 Our detailed data statistics can be found [here](https://github.com/vietai/mTet/blob/main/data_distribution.txt).
 
