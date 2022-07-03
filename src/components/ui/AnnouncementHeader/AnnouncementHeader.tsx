@@ -24,7 +24,7 @@ const AnnouncementHeader: React.FC<AnnouncementHeaderProps> = (
                 <Button
                     accent={Accent.primary}
                     type={ButtonType.linkExternal}
-                    onClickLink=""
+                    onClickLink="/vit5"
                     className="announcement-header__content__button"
                 >
                     Read more

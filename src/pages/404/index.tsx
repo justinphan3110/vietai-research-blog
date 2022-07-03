@@ -23,10 +23,6 @@ export default function FourZeroZero() {
                         </Link>
                         {` will get you on the right track.`}
                     </p>
-
-                    <h2> Or you can try searching </h2>
-
-                    <SearchBox size={Size.big} />
                 </Container>
             </PageSection>
         </PageLayout>
