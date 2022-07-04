@@ -58,7 +58,7 @@ const BlogPage: React.FC<BlogPageProps> = (props: BlogPageProps) => {
                 datePublished={props.data.mdx.frontmatter.publishedAt}
                 dateModified={props.data.mdx.frontmatter.modifiedAt}
             />
-            <AnnouncementHeader className="announcement-header--no-sticky" />
+            <AnnouncementHeader />
 
             <PostBanner
                 post={postFrontmatter}
