@@ -1,5 +1,19 @@
 # VietAI Research Blog Template
 
+### How to run the template
+
+1) Instal the necessary dependencies
+
+```
+$ yarn install
+```
+
+2) Run Gatsby
+
+```
+$ yarn start
+```
+
 The current template can be used for scientific blogs as it supports a wide variety of necessary components such as:
 
 - Latex rendering
@@ -38,19 +52,7 @@ Other important features:
 - Annimations on scroll support
 
 
-### How to run the template
 
-1) Instal the necessary dependencies
-
-```
-$ yarn install
-```
-
-2) Run Gatsby
-
-```
-$ yarn start
-```
 
 ### What you need to do before deploying?
 
