@@ -109,7 +109,7 @@ In our experiments, we made use of the [tensor2tensor](https://github.com/tensor
 In addition to improving dataset size and diversity, we employed vanilla Transformer architecture with Transformer-tall18 setting, doubled in size when compared to Transformer-tall9 (See Table 1 for more details) and better in translation quality in IWSLT2015 benchmark.
 
 With the help of Google’s Cloud TPUv3 and Google Cloud Platform infrastructure, we are able to train large models for faster and longer, in the end achieving state-of-the-art translation quality on our Transformer models v2.
-
+<!---
 Model|#Params|#Layers|#Heads|Hidden size|Intermediate size
 :--|:--|:--|:--|:--|:--
 Transformer-tall9 (ours)|180M|9|12|768|3072
@@ -119,6 +119,9 @@ M2M100|1.2B|24|16|1024|8192
 <br />
 <i><center>Table 2. Hyperparameter settings</center></i>
 <br />
+--->
+![hyperparameter_settings](hyperparameter_settings.png)
+*Table 2. Hyperparameter settings*
 
 In Figure 1, we report the results of MTet models on the IWSLT2015 Translation corpus. MTet Transformer-tall18 models achieve state-of-the-art translation for both Vietnamese and English. 
 There is also a significant improvement from training on a larger MTet dataset, contributing to 0.7% and 1.6% for En-Vi and Vi-En respectively.
