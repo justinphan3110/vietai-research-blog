@@ -24,11 +24,6 @@ Other important features:
 - XML feed generation
 - Sitemap generation
 
-## See a live example in our [website](https://theaisummer.com)
-
-The template is based on [theaisummer.com](https://theaisummer.com), which we strip from all the unecessary stuff in order to provide a minimal, ready-to-use but feature-rich framework for scientific blogs.
-
-
 ### Important information
 
 - The template is built with [Gatsby v2](https://www.gatsbyjs.com/) so some familiarity with React is required. For those who want to customize it, we highly recommend to check out the official [Gatsby docs](https://www.gatsbyjs.com/docs/)
