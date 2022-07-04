@@ -1,10 +1,13 @@
+
+Home             |  Blog
+:-------------------------:|:-------------------------:
+<img src="https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_screen.png"/>  |  <img src="https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_blog.png"/>
+
 # VietAI Research Blog Template
 
-![demo](https://github.com/justinphan3110/vietai-research-blog/blob/main/content/assets/images/demo_screen.png)
+[![PRs welcome!](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
-![demo_blog](https://github.com/justinphan3110/vietai-research-blog/blob/main/content/assets/images/demo_blog.png)
-
-### How to run the template
+###  🏁 How to run the template
 
 1) Instal the necessary dependencies
 
@@ -18,10 +21,15 @@ $ yarn install
 $ yarn start
 ```
 
-### Deploy with Vercel
+### 💫 Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjustinphan3110%2Fvietai-research-blog)
 
+### 🚀 Performance
+
+![demo_blog](https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/lighthouse.png)
+
+### 🔥 Features
 The current template can be used for scientific blogs as it supports a wide variety of necessary components such as:
 
 - Latex rendering
