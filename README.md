@@ -1,5 +1,9 @@
 # VietAI Research Blog Template
 
+![demo](https://github.com/justinphan3110/vietai-research-blog/blob/main/content/assets/images/demo_screen.png)
+
+![demo_blog](https://github.com/justinphan3110/vietai-research-blog/blob/main/content/assets/images/demo_blog.png)
+
 ### How to run the template
 
 1) Instal the necessary dependencies
