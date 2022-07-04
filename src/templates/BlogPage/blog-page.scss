@@ -105,6 +105,7 @@
         }
 
         .footnotes {
+    
             hr {
                 opacity: 0;
             }
@@ -114,8 +115,18 @@
                 font: $font-family;
                 color: $black;
 
+                @media only screen and (max-width: $breakpoint-sm) {
+                    font-size: 70%;
+                    line-height: 1.6;
+                    padding-bottom: 10px;
+                    font: $font-family;
+                    color: $black;
+                }
+
                 .footnote-backref {
                     font-size: 80%;
+
+                    
                 }
             }
         }
@@ -144,19 +155,20 @@
         }
     }
 
-    // @media only screen and (max-width: $breakpoint-lg) {
-    //     & {
-    //         grid-template-columns: minmax(260px, 1fr) minmax(600px, auto);
+    @media only screen and (max-width: $breakpoint-lg) {
+        & {
+            grid-template-columns: minmax(260px, 1fr) minmax(600px, auto);
 
-    //         &__content {
-    //             grid-column: 2;
-    //         }
+            &__content {
+                grid-column: 2;
 
-    //         &__right-sidebar {
-    //             display: none;
-    //         }
-    //     }
-    // }
+            }
+
+            &__right-sidebar {
+                display: none;
+            }
+        }
+    }
 
     //keep only content on large and below (doesn't seems nice when navsidebar is missing)
     @media only screen and (max-width: $breakpoint-lg) {
@@ -178,11 +190,13 @@
     @media only screen and (max-width: $breakpoint-sm) {
         & {
             &__content {
+                
                 .katex-display > .katex {
                     display: inline-block;
                     white-space: nowrap;
                     max-width: 100%;
-                    overflow-x: auto;
+                    overflow: hidden;
+                    overflow-x: hidden;
                     text-align: initial;
                     overflow-y: hidden;
                 }

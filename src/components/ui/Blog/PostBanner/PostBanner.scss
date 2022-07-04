@@ -4,7 +4,6 @@
 
 .post-banner {
     min-height: 440px;
-    margin-top: 50px;
 
     &__content {
         min-height: 400px;
@@ -17,7 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-
+            
             h1 {
                 font-size: 40px;
                 font-weight: $bold;
@@ -28,10 +27,18 @@
                 a {
                     padding-right: 10px;
                     font-size: 18px;
+
+                    @media only screen and (max-width: $breakpoint-lg) {
+                        font-size: 13px !important;
+                    }
                 }
                 &__author {
                     color: $text-color;
                     font-weight: 700;
+
+                    @media only screen and (max-width: $breakpoint-lg) {
+                        font-size: 13px !important;
+                    }
                 }
                 padding-bottom: 20px;
             }
@@ -47,6 +54,10 @@
                     padding: 4px 10px 4px 10px;
 
                     color: $dark-gray;
+
+                    @media only screen and (max-width: $breakpoint-lg) {
+                        font-size: 13px;
+                    }
                 }
                 &__tag_green {
                     background-color: #228B22;
@@ -56,6 +67,9 @@
                     padding: 4px 10px 4px 10px;
 
                     color: #ffffff;
+                    @media only screen and (max-width: $breakpoint-lg) {
+                        font-size: 13px;
+                    }
                 }
             }
 
@@ -76,12 +90,18 @@
             @media only screen and (max-width: $breakpoint-lg) {
                 & {
                     flex: 1 1 100%;
-                    padding: 10% 10% 0 10%;
+                    padding: 2% 10% 0 10%;
                     align-items: flex-start;
                     text-align: start;
                     order: 1;
                 }
+                h1 {
+                    font-size: 20px;
+                    font-weight: $bold;
+                    line-height: 30px;
+                }
             }
+            
         }
         &__featured-image {
             flex: 1 1 50%;

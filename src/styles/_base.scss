@@ -37,6 +37,11 @@ h3 {
     font-size: 22px;
     font-weight: $bold;
     line-height: 32px;
+
+    @media only screen and (max-width: $breakpoint-lg) {
+        font-size: 20px;
+        line-height: 25px;
+    }
 }
 
 h4 {
@@ -55,6 +60,12 @@ p {
     font-size: 25px;
     font-weight: $medium;
     line-height: 30px;
+
+    @media only screen and (max-width: $breakpoint-lg) {
+        font-size: 15px;
+        font-weight: $medium;
+        line-height: 20px;
+    }
 }
 
 span {
