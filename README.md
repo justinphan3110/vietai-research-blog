@@ -1,7 +1,7 @@
 
-![demo](https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_screen.png)
-
-![demo_blog](https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_blog.png)
+Home             |  Blog
+:-------------------------:|:-------------------------:
+<img src="https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_screen.png"/>  |  <img src="https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/demo_blog.png"/>
 
 # VietAI Research Blog Template
 
