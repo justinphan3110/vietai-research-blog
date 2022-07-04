@@ -44,6 +44,7 @@ const BlogPage: React.FC<BlogPageProps> = (props: BlogPageProps) => {
     const topicsDetails = new TopicsDetailsSelector(
         props.data.topicsYaml.topics
     ).get();
+
     return (
         <PageLayout>
             <Seo

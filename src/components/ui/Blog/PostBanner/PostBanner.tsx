@@ -16,6 +16,12 @@ const PostBanner: React.FC<PostBannerProps> = ({
     timeToRead,
     topicsDetails
 }: PostBannerProps) => {
+
+    React.useEffect(() => {
+        // console.log(post.author[0][0])
+        const author_name = post.author.map((a) => a[0])
+        console.log(author_name)
+    }, [])
     return (
         <div id="post-banner" className="post-banner">
             <div className="post-banner__content">
@@ -28,10 +34,13 @@ const PostBanner: React.FC<PostBannerProps> = ({
                                 <Fragment key={a}>
                                     <a
                                         className="post-banner__content__details__post-details__author"
+                                        href={a[1]}
+                                        target={'_blank'}
                                     >
-                                        {a}
+                                        {a[0] + ((i !== post.author.length - 1 && ', ') || '')}
+                                        {/* {i === post.author.length - 1 && a[0]} */}
                                     </a>
-                                    {post.author[i + 1] && <span>{','}</span>}
+                                    {/* {'s' && <span>{','}</span>} */}
                                 </Fragment>
                             ))}
                         </div>

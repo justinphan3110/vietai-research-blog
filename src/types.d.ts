@@ -27,7 +27,7 @@ interface Frontmatter {
     description: string;
     image: FluidImage;
     tags: Array<string>;
-    author: Array<string>;
+    author: Array<Array<string>>;
     suburl: string;
     huggingface?: string;
     github?: string;
