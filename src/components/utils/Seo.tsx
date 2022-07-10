@@ -271,9 +271,11 @@ const Seo: React.FC<SeoProps> = (props: SeoProps) => {
             )}
             {queryResult.favicon && (
                 <link
-                    rel="shortcut icon"
-                    href={queryResult.favicon.publicURL}
-                ></link>
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href={queryResult.favicon.publicURL}
+            />
             )}
             {queryResult.siteWebmanifest && (
                 <link
@@ -382,7 +384,7 @@ const querySeo = graphql`
         favicon96: file(relativePath: { eq: "icons/favicon-96x96.png" }) {
             publicURL
         }
-        favicon: file(relativePath: { eq: "icons/favicon.png" }) {
+        favicon: file(relativePath: { eq: "icons/favicon-32x32.png" }) {
             publicURL
         }
         ms70: file(relativePath: { eq: "icons/ms-icon-70x70.png" }) {

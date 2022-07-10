@@ -10,7 +10,7 @@ import './Footer.scss';
 
 const fetchLogoQuery = graphql`
     query {
-        file(relativePath: { eq: "logos/logo.png" }) {
+        file(relativePath: { eq: "logos/VietAI_Logo (RGB)_Dark Bgrd.png" }) {
             childImageSharp {
                 fluid(maxWidth: 200) {
                     ...GatsbyImageSharpFluid
