@@ -25,6 +25,12 @@ $ yarn start
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjustinphan3110%2Fvietai-research-blog)
 
+
+#### or 
+```
+$ vercy --prod
+```
+
 ### 🚀 Performance
 
 ![demo_blog](https://github.com/justinphan3110/vietai-research-blog/blob/main/assets/lighthouse.png)
