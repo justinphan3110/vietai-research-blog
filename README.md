@@ -28,7 +28,7 @@ $ yarn start
 
 #### or 
 ```
-$ vercy --prod
+$ vercel --prod
 ```
 
 ### 🚀 Performance
