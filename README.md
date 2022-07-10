@@ -7,7 +7,10 @@ Home             |  Blog
 
 [![PRs welcome!](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
-###  🏁 How to run the template
+###### Built With <a href="https://www.gatsbyjs.com"><img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="20" /></a>
+
+  
+###  🏁 Quick Start
 
 1) Instal the necessary dependencies
 
