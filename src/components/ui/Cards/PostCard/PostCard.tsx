@@ -18,12 +18,8 @@ const PostCard: React.FC<PostCardProps> = ({
     post,
     className
 }: PostCardProps) => {
-    useEffect(() => {
-        console.log(post)
-    }, [])
 
     const openBlogPage = (suburl: string) => {
-        console.log(suburl)
         window.open(suburl, '_blank')
     }
     return (

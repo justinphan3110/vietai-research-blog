@@ -11,6 +11,11 @@ interface HomeBannerProps {
 }
 
 const HomeBanner: React.FC<HomeBannerProps> = (props: HomeBannerProps) => {
+
+    React.useEffect(() => {
+        console.log(props.horizontalCarouselTopics)
+    }, [props])
+
     return (
         <div className="home-banner">
             <div className="home-banner__content">
@@ -23,11 +28,11 @@ const HomeBanner: React.FC<HomeBannerProps> = (props: HomeBannerProps) => {
                 </div>
                 <div className="home-banner__content__image">
                     <HorizontalCarousel
-                        slidesNum={props.horizontalCarouselTopics.length}
+                        slidesNum={props.horizontalCarouselTopics.length + 1}
                     >
                         {[...props.horizontalCarouselTopics]
                             .sort()
-                            .sort(() => Math.random() - 0.5)
+                            // .sort(() => Math.random() - 0.5)
                             .map((topic, i) => (
                                 <Link
                                     key={topic.title}

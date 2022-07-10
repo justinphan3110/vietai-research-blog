@@ -14,7 +14,6 @@ const renderGroup = (
     groupSize: number
 ) => {
     const renderedItems = [];
-
     for (let j = 0; j < groupSize; j++) {
         const topic = topics[groupIndex * groupSize + j];
         renderedItems.push(

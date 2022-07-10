@@ -38,16 +38,16 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = (
     });
     const slideTime = 2000;
 
-    useEffect(() => {
-        const nextCurrent =
-            (currents.current - 1 + props.slidesNum) % props.slidesNum;
-        const nextActives = getNextActiveSlides(currents.actives, nextCurrent);
-        const timer = setTimeout(
-            () => setCurrents({ current: nextCurrent, actives: nextActives }),
-            slideTime
-        );
-        return () => clearTimeout(timer);
-    }, [currents]);
+    // useEffect(() => {
+    //     const nextCurrent =
+    //         (currents.current - 1 + props.slidesNum) % props.slidesNum;
+    //     const nextActives = getNextActiveSlides(currents.actives, nextCurrent);
+    //     const timer = setTimeout(
+    //         () => setCurrents({ current: nextCurrent, actives: nextActives }),
+    //         slideTime
+    //     );
+    //     return () => clearTimeout(timer);
+    // }, [currents]);
 
     const childrensArray = React.Children.toArray(props.children);
 

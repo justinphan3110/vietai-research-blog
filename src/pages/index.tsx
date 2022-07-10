@@ -35,9 +35,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
     const postsSelector = new PostsSelector(data.allMdx.nodes);
     useAnimationOnScroll();
-    useEffect(() => {
-        console.log(data.homeYaml.tabs_posts)
-    }, [])
+
     return (
         <PageLayout>
             <Seo isPost={false} />
@@ -48,14 +46,14 @@ const Home: React.FC<HomeProps> = ({ data }: HomeProps) => {
                     <div className="section-text">
                         <h2>Explore VietAI Research Works</h2>
                         <p>
-                            An Artificial Intelligence where you can read about our new state-of-the-art Deep Learning works.
+                            An Artificial Intelligence Hub where you can read about our new state-of-the-art Deep Learning works.
                         </p>
                     </div>
 
                     <PostsPerTopic
                         {...postsSelector.getByTopic(data.homeYaml.tabs_posts)}
                     />
-                    {true || console.log(data.homeYaml.tabs_posts)}
+                  
                 </Container>
             </PageSection>
             <PageSection className="topics-section">

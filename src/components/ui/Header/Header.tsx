@@ -12,7 +12,7 @@ import HFLogo from '-!svg-react-loader!../../../../content/svg/huggingface_logo.
 //..GatsbyImageSharpFluid_noBase64 for no blur up effect
 const fetchLogoQuery = graphql`
     query {
-        file(relativePath: { eq: "logos/logo_black.png" }) {
+        file(relativePath: { eq: "logos/VietAI_Logo-RGB.png" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid_noBase64
