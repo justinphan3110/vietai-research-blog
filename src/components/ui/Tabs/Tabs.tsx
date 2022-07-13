@@ -6,6 +6,7 @@ interface TabsProps {
     children: React.ReactNode;
     size: number;
     className?: string;
+    always_display?: Boolean;
 }
 
 const Tabs: React.FC<TabsProps> = (props: TabsProps) => {
@@ -42,11 +43,11 @@ const Tabs: React.FC<TabsProps> = (props: TabsProps) => {
                     )
                 )}
             </div>
-            <div className="tabs__content">
+            <div className={"tabs__content"}>
                 {React.Children.map(props.children, (child, i) =>
                     React.isValidElement(child)
                         ? React.cloneElement(child, {
-                              className: `tabs__content__item${activeTabs[i]}`
+                              className: (props.always_display && "tabs__content__item_always_display") || `tabs__content__item${activeTabs[i]}`
                           })
                         : child
                 )}

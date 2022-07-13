@@ -17,6 +17,7 @@ const PostsPerTopic: React.FC<PostsPerTopicProps> = (
         <Tabs
             size={props.postsPerTopic.length}
             className="posts-per-topic__tabs"
+            always_display
         >
             {props.postsPerTopic.map((postsPerTopicBlock) => {
                 return (

@@ -54,6 +54,14 @@
 
 .tabs__content {
     &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__item_always_display {
         display: block;
     }
 }
