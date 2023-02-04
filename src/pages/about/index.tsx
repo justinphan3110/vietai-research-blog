@@ -18,9 +18,6 @@ interface AboutProps {
             authors: Author[];
         };
         file: FluidImage;
-        faqYaml: {
-            faq: QuestionAnswer[];
-        };
     };
 }
 const About: React.FC<AboutProps> = ({ data }: AboutProps) => {
@@ -260,13 +257,6 @@ const About: React.FC<AboutProps> = ({ data }: AboutProps) => {
                     </Group>
                 </Container>
             </PageSection>
-
-            <PageSection className="faq-section">
-                <Container>
-                    <h2>FAQ</h2>
-                    <Accordion items={data.faqYaml.faq} />
-                </Container>
-            </PageSection>
         </PageLayout>
     );
 };
@@ -304,13 +294,6 @@ export const aboutQuery = graphql`
                     srcSet
                     sizes
                 }
-            }
-        }
-
-        faqYaml {
-            faq {
-                question
-                answer
             }
         }
     }

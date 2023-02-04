@@ -22,8 +22,10 @@ about_section:
 tabs_posts:
     - topic: Natural Language Processing
       posts:
+          - vipubmed/
           - vit5/
           - mtet/
+          # - mtet/
           # - mtet/
           
     # - topic: Computer Vision
