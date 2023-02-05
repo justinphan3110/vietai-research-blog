@@ -20,11 +20,11 @@ const AnnouncementHeader: React.FC<AnnouncementHeaderProps> = (
             </a> */}
             <div className="announcement-header__content">
             
-                <p>📰 Check out our newest ViT5 Summarization Works</p>
+                <p>📰 Check out our newest EACL 2023 Work</p>
                 <Button
                     accent={Accent.primary}
                     type={ButtonType.linkExternal}
-                    onClickLink="/vit5"
+                    onClickLink="/vipubmed"
                     className="announcement-header__content__button"
                 >
                     Read more

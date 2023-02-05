@@ -70,8 +70,39 @@ concatenation of the same sentinel tokens and the real masked spans/tokens.
 We finetune and benchmark our pretrained
 ViPubmedT5 model on two public Vietnamese biomedical-domain datasets acrDrAid & FAQSum (from [ViHealthBERT work](https://aclanthology.org/2022.lrec-1.35)) and our released [ViMedNLI dataset](https://github.com/vietai/ViPubmed#3-released-datasets).
 
+![results](results.png)
+*Notes: The best scores are in bold, and the second best scores are underlined.  PhoBERT
+& ViHealthBERT scores on FAQSum and acrDrAid are from [ViHealthBERT paper](https://aclanthology.org/2022.lrec-1.35/)*
+
+The main takeaway is that training on synthetic
+translated biomedical data allows ViPubmedT5 to
+learn a better biomedical context representation.
+As a result, ViPubmedT5 achieves state-of-the-art
+in Medical and Clinical contexts while performing
+slightly worse than ViT5 in healthcare topics.
+
+For both medical and clinical datasets, ViPubmedT5 outperforms other existing models. There
+are also notable improvements from the general domain ViT5 to ViPubmedT5 (*88->89.04 in
+acrDrAid and 77.85->81.65 in ViMedNLI*). This
+indicates that the translated ViPubmed corpus contains biomedical knowledge that low-resource Vietnamese pretrained models can leverage.
+
+## Scaling to Other Languages
+
+Our novel way of utilizing a state-of-the-art NMT
+system to generate synthetic translated medical data
+for pretrained models is not limited to the Vietnamese language and is scalable to many other
+low-resource languages. Recent works focusing on improving the quality of multiple low-resource NMT
+systems ([M2M100](https://arxiv.org/pdf/2010.11125.pdf) or [NLLB](https://arxiv.org/abs/2207.04672))
+make the approach discussed in this paper more practical to produce synthetic translated
+biomedical data and enrich the Biomedical NLP
+research knowledge in multiple low-resource languages.
 
 
+## Acknowledgements
+
+We would like to thank the Google TPU Research
+Cloud (TRC) program and Soonson Kwon (Google
+ML Ecosystem programs Lead) for their supports.
 
 ## Refer to this work
 
